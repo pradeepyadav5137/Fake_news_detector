@@ -1,0 +1,8 @@
+timestamp,news,prediction,confidence,references_found
+2025-06-26T14:07:23.465158,"India rises in QS World University Rankings 2026, reflecting progress in global education and research",Real,0.6581775518244398,True
+2025-06-26T14:12:02.443712,"s: India rises in QS World University Rankings 2026, reflecting progress in global education and researc",Real,0.6234014316557329,True
+2025-06-26T14:12:55.128926,"ndia has marked its strongest performance in the QS World University Rankings 2026, with 54 institutions featured—up from 46 last year. IIT Delhi led the national list at joint 123rd, its best-ever rank, followed by IIT Bombay and IIT Madras.",Fake,0.877480819240345,True
+2025-06-26T14:14:02.949745,"Apple Unveils iOS 18 with AI Features at WWDC 2024""",Real,0.6094763107403276,True
+2025-06-26T14:14:25.746806,"Nvidia becomes world’s most valuable company, overtaking Microsoft",Fake,0.5638565810633256,True
+2025-06-26T14:14:56.175619,"""India defeats South Africa to win ICC T20 World Cup 2024""",Real,0.8818698656397645,True
+2025-06-26T14:19:26.971803,"""India defeats South Africa to win ICC T20 World Cup 2024""",Real,0.8818698656397645,True
