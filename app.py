@@ -139,10 +139,44 @@ except Exception:
     logging.exception("Failed to load model or vectorizer")
     st.stop()
 
+# Sample news articles for testing
+SAMPLE_ARTICLES = {
+    "Real News - Tech": "Apple announces new iPhone 15 with USB-C port, replacing Lightning connector. The tech giant revealed the new device at their annual September event, featuring improved cameras and performance. The switch to USB-C comes after EU regulations requiring standardized charging ports.",
+    
+    "Real News - Sports": "India defeats South Africa to win ICC T20 World Cup 2024. The victory came in a thrilling final match in Barbados, with Virat Kohli playing a crucial innings. This marks India's second T20 World Cup title after their 2007 triumph.",
+    
+    "Fake News Example": "Scientists discover that drinking coffee made from blue beans can make people live up to 200 years. The study, conducted by the fictional University of Atlantis, claims that these magical beans contain immortality compounds that reverse aging at the cellular level.",
+    
+    "Real News - Education": "India rises in QS World University Rankings 2026, reflecting progress in global education and research. IIT Delhi achieved its best-ever ranking at joint 123rd position, while 54 Indian institutions were featured in the rankings, up from 46 last year."
+}
+
 # UI Components
 def render_header():
     st.title("🔍 TruthLens: AI-Powered News Authenticator")
     st.caption("Paste an article below and let AI + live APIs verify it.")
+
+def render_sample_section():
+    st.subheader("🧪 Try Sample Articles")
+    
+    # Create columns for sample buttons
+    cols = st.columns(2)
+    sample_keys = list(SAMPLE_ARTICLES.keys())
+    
+    selected_sample = None
+    
+    with cols[0]:
+        if st.button("📱 " + sample_keys[0], use_container_width=True):
+            selected_sample = SAMPLE_ARTICLES[sample_keys[0]]
+        if st.button("🏏 " + sample_keys[1], use_container_width=True):
+            selected_sample = SAMPLE_ARTICLES[sample_keys[1]]
+    
+    with cols[1]:
+        if st.button("❌ " + sample_keys[2], use_container_width=True):
+            selected_sample = SAMPLE_ARTICLES[sample_keys[2]]
+        if st.button("🎓 " + sample_keys[3], use_container_width=True):
+            selected_sample = SAMPLE_ARTICLES[sample_keys[3]]
+    
+    return selected_sample
 
 def render_input():
     return st.text_area("📰 News Article:", "", height=200)
